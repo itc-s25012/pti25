@@ -3,16 +3,17 @@ import random
 
 def omikuji():
     kuji = ["大吉","中吉","小吉","凶"]
-    lbl.configure(text=random.choice(kuji))
+    lbl2.configure(text=random.choice(kuji))
 
 root = tk.Tk()
-root = geometry("200x100")
+root.title("おみくじアプリ")
+root. geometry("400x100")
 
-lbl = tk.Label(text="おみくじアプリ")
 btn = tk.Button(text="おみくじ!", command = omikuji)
+lbl2 = tk.Label(text="ここに結果が表示されるよ",font=("",16))
 
 
-lbl.pack()
 btn.pack()
+lbl2.pack()
 tk.mainloop()
 
